@@ -1,4 +1,5 @@
 function preview(){
     console.log('dwedw')
-    console.log('second')
+    console.log('我')
+    console.log('第一次')
 }
