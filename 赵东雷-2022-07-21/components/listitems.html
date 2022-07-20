@@ -1,0 +1,22 @@
+<div class="listitems" ng-click="jump($ctrl.url)" ng-class="$ctrl.cls">
+    <!-- 左边 -->
+    <div class="list-left">
+        <!-- ng-if用来看icon是否存在 -->
+       <img class="list-icon"  ng-src="{{$ctrl.data.src}}" ng-if="$ctrl.data.src">
+       <div class="left-writing">
+           <span class="main-title">
+                {{$ctrl.data.title}}
+           </span>
+           <span class="desc" ng-if="$ctrl.data.desc">
+               {{$ctrl.data.desc}}
+           </span>
+       </div>
+    </div>
+    <div class="middle-area"></div>
+    <!-- 右边 -->
+    <div class="list-right">
+        <div ng-transclude>
+        </div>
+        <img class="img-right"  ng-src="{{$ctrl.data.enter}}" ng-if="$ctrl.data.enter">
+    </div>
+</div>

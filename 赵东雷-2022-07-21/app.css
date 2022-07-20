@@ -1,0 +1,208 @@
+/* app css stylesheet */
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 1000px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+.menu > a:visited {
+  background-color: #D7DEE1;
+  color: aqua;
+}
+.menu > li {
+  display: inline;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  width: 325px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.menu > li a {
+  display: flex;
+  align-items: center;
+}
+.menu > li a img {
+  display: block;
+  margin-right: 10px;
+}
+.menu > li a span {
+  display: block;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: -webkit-linear-gradient(top left, #EEF4F9, #F9F1ED);
+  overflow: hidden;
+}
+body nav {
+  box-sizing: border-box;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+body nav .backkey {
+  display: flex;
+  align-items: center;
+}
+body nav .backkey span {
+  margin-left: 10px;
+}
+body .content {
+  width: 100%;
+  height: calc(100% - 100px);
+  display: flex;
+  justify-content: space-between;
+  overflow-y: hidden;
+  padding: 20px 20px 0 50px;
+}
+body .content .left {
+  width: 30%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 5px 10px;
+}
+body .content .left .leftTop {
+  display: flex;
+  align-items: center;
+}
+body .content .left .leftTop svg {
+  margin-right: 10px;
+}
+body .content .left .leftTop .username {
+  display: flex;
+  flex-direction: column;
+}
+body .content .left .leftTop .username div {
+  display: block;
+  font-size: 12px;
+}
+body .content .right {
+  width: 70%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+body .content .search-input {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin-top: 20px;
+  border: 1px solid #D7DEE1;
+  border-bottom: 3px solid #D7DEE1;
+  padding-right: 10px;
+}
+body .content .search-input input {
+  border: none;
+  height: 30px;
+  width: 95%;
+  outline: #F0F4F7;
+  background-color: #F0F4F7;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.escapekey {
+  display: flex;
+  align-items: center;
+}
+.escapekey img {
+  display: block;
+  margin-left: 10px;
+}
+.escapekey svg {
+  margin-left: 20px;
+}
+.escapekey span {
+  margin-left: 15px;
+}
+.msg {
+  font-size: 10px;
+}
+.msgname {
+  font-size: 15px;
+}
+li:hover {
+  background-color: #E6EBF0;
+}
+.act-menu_one {
+  background-color: #E6EBF0;
+}
+.icon-back:hover {
+  background-color: #E6EBF0;
+}
+.es-key:hover {
+  background-color: #E6EBF0;
+}
+.page-title {
+  height: 30px;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.item {
+  margin-top: 25px;
+}
+.item .hidearea {
+  margin-top: 0px;
+  border-radius: 0;
+}
+.item .stitle {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.footer {
+  margin-top: 40px;
+}
+.footer .ques-tip {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+}
+.footer .ques-tip img {
+  margin-right: 10px;
+}
+.footer .ques-tip a {
+  color: blue;
+}
+.dropdownlist {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.dropdownlist label {
+  border: 1px solid #FCFBFD;
+  background-color: #FCFBFD;
+  padding: 5px 10px;
+  height: 35px;
+  border-bottom: 2px solid #F4F2F1;
+}
+.dropdownlist label input {
+  margin-left: 30px;
+}
+.dropdownlist label span {
+  margin-left: 5px;
+}
+.dropdownlist .list-item {
+  border-top: 2px solid #F3F2F3;
+}

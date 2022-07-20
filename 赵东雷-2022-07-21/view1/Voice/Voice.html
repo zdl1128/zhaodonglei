@@ -1,0 +1,52 @@
+<!-- <link rel="stylesheet" href="./view1/Voice/Voice.css"> -->
+<!-- 面包屑导航 -->
+<div class="page-title"><span ng-click="onJumpPage('#!/view1')">系统</span>>声音</div>
+<!-- 页面主要内容 -->
+<div class="page-content">
+    <!-- 亮度和颜色 -->
+    <div class="item" ng-controller="Out">
+        <div class="stitle">输出</div>
+        <div>
+            <!-- <listitems data="data" ng-repeat="data in colorlist" ></listitems> -->
+        
+            <listitems data="outlist[0]" url="outlist[0].url" ng-click="changeHide()"></listitems>
+         
+            <!-- 隐藏框 -->
+            <div ng-hide="outHide">
+              <listitems data="hidelist[0]" url="hidelist[0].url" cls="hidearea"></listitems>
+              <listitems data="hidelist[1]" url="hidelist[1].url" cls="hidearea"></listitems>
+            </div>
+            <listitems data="outlist[1]" url="outlist[1].url"><voice voice="0"></voice></listitems>
+            <listitems data="outlist[2]" url="outlist[2].url"></listitems>
+        </div>
+    </div>
+    <!-- 缩放和布局 -->
+    <div class="item">
+        <div class="stitle">输入</div>
+        <div>
+            <listitems data="enterlist[0]" url="enterlist[0].url"></listitems>
+            <listitems data="enterlist[1]" url="enterlist[1].url"><voice voice="0"></voice></listitems>
+        </div>
+    </div>
+    <!-- 相关设置 -->
+    <div class="item">
+        <div class="stitle">高级</div>
+        <div>
+            <listitems data="highlist[0]" url="highlist[0].url"></listitems>
+            <listitems data="highlist[1]" url="highlist[1].url"></listitems>
+            <listitems data="highlist[2]" url="highlist[2].url"></listitems>
+            <listitems data="highlist[3]" url="highlist[3].url"></listitems>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div class="footer">
+        <div class="ques-tip">
+          <img src="../img/help.png" width="20" height="20" />
+          <span><a href="#" class="link">获取帮助</a></span>
+        </div>
+        <div class="ques-tip">
+          <img src="../img/fankui.png" width="20" height="20" />
+          <span><a href="#" class="link">提供反馈</a></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>AngularJS Demo</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="app.css" />
+  <link rel="stylesheet" href="components/components.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="backkey">
+      <div onclick="goBack()">
+
+        <img src="./img/left.png" class="icon-back" width="20" height="20" alt="">
+      </div>
+
+      <span>设置</span>
+    </div>
+    <div class="escapekey">
+      <img src="./img/down.png" class="icon-back" width="20" height="20" alt="">
+      <img src="./img/fangkuai.png" class="icon-back" width="15" height="15" alt="">
+
+      <img src="./img/guanbi.png" class="icon-back" width="20" height="20" alt="">
+    </div>
+  </nav>
+  <div class="content">
+    <!-- 左边 -->
+    <div class="left">
+      <div class="leftTop">
+        <img src="./img/avatar.png"  width="50" height="50" alt="">
+        <div class="userName">
+          <div class="msgname">zdl</div>
+          <div class="msg">myststx@qq.com</div>
+        </div>
+      </div>
+      <div class="search-input">
+        <input type="text" placeholder=" 查找设置" height="50"/>
+        <img src="./img/search.png"  width="15" height="15" alt="">
+      </div>
+      <ul class="menu">
+        <li ng-class="activeOneMenuClass=='系统'?'act-menu_one':''">
+          <a href="#!/view1" ng-click="oneMenuClick('系统')"> 
+            <img src="./img/computer.png"  width="20" height="20" alt="">
+            <span>系统</span>
+          </a>
+        </li>
+        <li ng-class="activeOneMenuClass=='蓝牙和其他设备'?'act-menu_one':''">
+          <a href="#!/view2" ng-click="oneMenuClick('蓝牙和其他设备')">
+            <img src="./img/blue.png"  width="20" height="20" alt="">
+            <span>蓝牙和其他设备</span>
+          </a>
+        </li>
+        <li ng-class="activeOneMenuClass=='网络和Internet'?'act-menu_one':''">
+          <a href="#!/view3" ng-click="oneMenuClick('网络和Internet')">
+            <img src="./img/wifi.png"  width="20" height="20" alt="">
+            <span>网络和Internet</span>
+          </a>
+        </li>
+        <li ng-class="activeOneMenuClass=='个性化'?'act-menu_one':''">
+          <a href="#!/view4" ng-click="oneMenuClick('个性化')">
+            <img src="./img/pen.png"  width="20" height="20" alt="">
+            <span>个性化</span>
+          </a>
+        </li>
+        <li ng-class="activeOneMenuClass=='应用'?'act-menu_one':''">
+          <a href="#!/view5" ng-click="oneMenuClick('应用')">
+            <img src="./img/yingyong.png"  width="20" height="20" alt="">
+            <span>应用</span>
+          </a>
+        </li>
+        <li ng-class="activeOneMenuClass=='账户'?'act-menu_one':''">
+          <a href="#!/view6" ng-click="oneMenuClick('账户')">
+            <img src="./img/user.png"  width="20" height="20" alt="">
+            <span>账户</span>
+          </a>
+        </li>
+        <li ng-class="activeOneMenuClass=='时间和语言'?'act-menu_one':''">
+          <a href="#!/view7" ng-click="oneMenuClick('时间和语言')">
+            <img src="./img/time.png"  width="20" height="20" alt="">
+            <span>时间和语言</span>
+          </a>
+        </li>
+        <li ng-class="activeOneMenuClass=='游戏'?'act-menu_one':''">
+          <a href="#!/view8" ng-click="oneMenuClick('游戏')">
+            <img src="./img/youxi.png"  width="20" height="20" alt="">
+            <span>游戏</span>
+          </a>
+        </li>
+        <li ng-class="activeOneMenuClass=='辅助功能'?'act-menu_one':''">
+          <a href="#!/view9" ng-click="oneMenuClick('辅助功能')">
+            <img src="./img/person.png"  width="20" height="20" alt="">
+            <span>辅助功能</span>
+          </a>
+        </li>
+        <li ng-class="activeOneMenuClass=='隐私和安全性'?'act-menu_one':''">
+          <a href="#!/view10" ng-click="oneMenuClick('隐私和安全性')">
+            <img src="./img/safe.png"  width="20" height="20" alt="">
+            <span>隐私和安全性</span>
+          </a>
+        </li>
+        <li ng-class="activeOneMenuClass=='Windows更新'?'act-menu_one':''">
+          <a href="#!/view11" ng-click="oneMenuClick('Windows更新')">
+            <img src="./img/update.png"  width="20" height="20" alt="">
+            <span>更新</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- 右边 -->
+    <div ng-view class="right"></div>
+  </div>
+  <!-- <div>demo 版本: v<span app-version></span></div> -->
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="view3/view3.js"></script>
+  <script src="view4/view4.js"></script>
+  <script src="view5/view5.js"></script>
+  <script src="view6/view6.js"></script>
+  <script src="view7/view7.js"></script>
+  <script src="view8/view8.js"></script>
+  <script src="view9/view9.js"></script>
+  <script src="view10/view10.js"></script>
+  <script src="view11/view11.js"></script>
+  <script src="view7/Date-And-Language/Date-And-Language.js"></script>
+  <script src="view7/Language-And-area/Language-And-area.js"></script>
+  <script src="view7/Enter/Enter.js"></script>
+  <script src="view7/Advanced-Setting/Advanced-Setting.js"></script>
+  <script src="view7/Key-In-View/Key-In-View.js"></script>
+  <script src="core/version/version.js"></script>
+  <script src="core/version/version-directive.js"></script>
+  <script src="core/version/interpolate-filter.js"></script>
+  <script src="components/components.js"></script>
+  <script src="view1/Screen/Screen.js"></script>
+  <script src="view1/Voice/Voice.js"></script>
+  <script src="view1/Notice/Notice.js"></script>
+  <script src="view1/Helper/Helper.js"></script>
+  <script>
+    function changTime() {
+      document.getElementById("checkTime").innerHTML = new Date().toLocaleString()
+    }
+    function  updateTime(){
+    document.getElementById('update').innerHTML='上次成功同步时间:'+new Date().toLocaleString()
+  
+  }
+    function getThistime() {
+      let x = new Date();
+      document.getElementById("this-time").innerHTML = x;
+    }
+
+    function goBack() {
+      window.location.href = history.back();
+    }
+  </script>
+</body>
+
+</html>

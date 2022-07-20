@@ -1,0 +1,11 @@
+<div class="voice">
+  <img ng-src="{{$ctrl.src}}" />
+  <div>{{$ctrl.voice}}</div>
+  <input
+    type="range"
+    ng-model="$ctrl.voice"
+    min="0"
+    max="100"
+    ng-change="changeVoice()"
+  />
+</div>
