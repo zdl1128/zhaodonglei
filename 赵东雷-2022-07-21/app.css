@@ -202,7 +202,16 @@ li:hover {
 }
 .dropdownlist label span {
   margin-left: 5px;
+  font-size: 13px;
 }
 .dropdownlist .list-item {
   border-top: 2px solid #F3F2F3;
+}
+.disabled {
+  pointer-events: none;
+  filter: grayscale(1);
+}
+.closed {
+  pointer-events: none;
+  filter: grayscale(1);
 }

@@ -35,14 +35,15 @@ angular.module('components', [])
       transclude: true,
       bindings: {
          opened: "=?",
-         disabled: "=?"
+         closed: "=?"
       },
       controller: function ($scope) {
          $scope.toggle = ($event) => {
-            if (this.disabled) return;
+            $event.stopPropagation()
+            if(this.closed) return;
             this.opened = !this.opened;
             // new Event()
-            $event.stopPropagation()
+            
          };
       }
    })
@@ -57,6 +58,7 @@ angular.module('components', [])
       controller: function ($scope) {
 
          $scope.jump = function (href) {
+            if(href!='')
             console.log(href)
             href && (window.location.href = href)
          }

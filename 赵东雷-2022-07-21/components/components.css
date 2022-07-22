@@ -3,6 +3,9 @@
   align-items: center;
   margin-right: 10px;
 }
+.on-off div {
+  margin-right: 1em;
+}
 .switch {
   display: flex;
   width: 25px;
@@ -36,7 +39,7 @@
   width: 80%;
   background-color: #FBFBFB;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 10px;
   border-radius: 8px;
   height: 60px;
 }
@@ -102,4 +105,8 @@
 .voice input {
   margin-left: 5px;
   height: 5px;
+}
+.listitems:hover{
+  background-color: #E7EAED;
+  cursor: pointer;
 }

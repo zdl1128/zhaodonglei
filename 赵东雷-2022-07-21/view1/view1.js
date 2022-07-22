@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute','myApp.Screen','myApp.Voice','myApp.Notice','myApp.Helper'])
+angular.module('myApp.view1', ['ngRoute','myApp.Screen','myApp.Voice','myApp.Notice','myApp.Helper','myApp.Cell'])
 
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/view1', {
@@ -12,7 +12,7 @@ angular.module('myApp.view1', ['ngRoute','myApp.Screen','myApp.Voice','myApp.Not
     $scope.datalist = [{
         title: '屏幕',
         desc: '显示器，亮度，夜间模式，显示器配置文件',
-        src: './img/computer.png',
+        src: '/img/computer.png',
         enter: '/img/jinru.png',
         url:'#!/view1/Screen',
       },

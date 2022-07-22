@@ -4,20 +4,34 @@
 <!-- 页面主要内容 -->
 <div class="page-content">
     <!-- 亮度和颜色 -->
-    <div class="item">
+    <div class="item" >
         <div>
             <!-- <listitems data="data" ng-repeat="data in colorlist" ></listitems> -->
-            <listitems data="noticelist[0]" url="noticelist[0].url"><switch opened="true"></switch></listitems>
+            <listitems data="noticelist[0]" url="noticelist[0].url" ng-click="hideChange()"><switch opened="status.opened0"></switch></listitems>
+            <!-- 隐藏域 -->
+        <div ng-hide="outHide" class="dropdownlist" ng-class="{disabled:!status.opened0}">
+            <label for="1" >
+                <input type="checkbox" id="1" ><span>在锁屏界面上显示通知</span>
+            </label>
+            <label for="2">
+                <input type="checkbox" id="2"><span>在锁屏界面上显示提醒和VoIP来电</span>
+            </label>
+            <label for="3">
+                <input type="checkbox" id="3"><span>允许通知播放声音</span>
+            </label>
+         
+        </div>
             <listitems data="noticelist[1]" url="noticelist[1].url"></listitems>
         </div>
     </div>
+    
     <!-- 缩放和布局 -->
     <div class="item">
         <div class="stitle">来自应用和其他发送者的通知</div>
         <div class="stitle">排序依据 最新</div>
         <div>
             <listitems data="data" url="data.url" ng-repeat="data in applist" >
-                <switch opened="true"></switch>
+                <switch opened="status['opened'+($index+1)]" closed="!status.opened0"></switch>
             </listitems>
         </div>
     </div>
@@ -25,13 +39,13 @@
     <div class="item">
         <div  class="dropdownlist">
                 <label for="1" class="list-item">
-                    <input type="checkbox" id="first" ><span>更新后向我显示欢迎使用Windows体验，并在我登录时突出显示新增内容和建议的内容</span>
+                    <input type="checkbox" id="1" ><span>更新后向我显示欢迎使用Windows体验，并在我登录时突出显示新增内容和建议的内容</span>
                 </label>
                 <label for="2">
-                    <input type="checkbox" id="second"><span>提供关于如何设置设备的建议</span>
+                    <input type="checkbox" id="2"><span>提供关于如何设置设备的建议</span>
                 </label>
                 <label for="3">
-                    <input type="checkbox" id="third"><span>使用Windows时获取提示和建议</span>
+                    <input type="checkbox" id="3"><span>使用Windows时获取提示和建议</span>
                 </label>
              
             </div>

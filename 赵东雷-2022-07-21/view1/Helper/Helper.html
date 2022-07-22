@@ -1,6 +1,6 @@
 <!-- <link rel="stylesheet" href="./view1/Screen/Screen.css"> -->
 <!-- 面包屑导航 -->
-<div class="page-title"><span ng-click="onJumpPage('#!/view1')">系统</span>>通知</div>
+<div class="page-title"><span ng-click="onJumpPage('#!/view1')">系统</span>>专注助手</div>
 <!-- 页面主要内容 -->
 <div class="page-content">
     <!-- 亮度和颜色 -->
@@ -10,13 +10,13 @@
         </div>
         <div ng-hide="outHide" class="dropdownlist">
             <label for="1" class="list-item">
-                <input type="checkbox" id="first" ><span>更新后向我显示欢迎使用Windows体验，并在我登录时突出显示新增内容和建议的内容</span>
+                <input type="checkbox" id="1" ><span>更新后向我显示欢迎使用Windows体验，并在我登录时突出显示新增内容和建议的内容</span>
             </label>
             <label for="2">
-                <input type="checkbox" id="second"><span>提供关于如何设置设备的建议</span>
+                <input type="checkbox" id="2"><span>提供关于如何设置设备的建议</span>
             </label>
             <label for="3">
-                <input type="checkbox" id="third"><span>使用Windows时获取提示和建议</span>
+                <input type="checkbox" id="3"><span>使用Windows时获取提示和建议</span>
             </label>
          
         </div>
@@ -26,11 +26,10 @@
         <div class="stitle">自动规则</div>
         <div>
             <listitems data="data" url="data.url" ng-repeat="data in autolist" >
-                <switch opened="true"></switch>
+                <switch opened="status['opened'+($index)]"></switch>
             </listitems>
         </div>
     </div>
-    
     <!-- 页脚 -->
     <div class="footer">
         <div class="ques-tip">

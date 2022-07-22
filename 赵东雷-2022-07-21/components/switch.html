@@ -1,5 +1,5 @@
-<div class="on-off">
-    <div style="margin-right: 1em;">{{$ctrl.opened ? "开" : "关" }}</div>
+<div class="on-off" ng-class="$ctrl.closed?'closed':''">
+    <div>{{$ctrl.opened ? "开" : "关" }}</div>
     <div ng-click="toggle($event)" ng-class="$ctrl.opened?'switch opened':'switch'">
         <div ng-class="$ctrl.opened?'opened':''"></div>
     </div>

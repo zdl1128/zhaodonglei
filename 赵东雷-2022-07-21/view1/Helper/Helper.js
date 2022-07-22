@@ -18,7 +18,13 @@ angular
         src: "./img/computer.png",
       },
     ];
-
+    $scope.status = {
+      opened0:true,
+      opened1:true,
+      opened2:true,
+      opened3:true,
+      opened4:true
+    }
     $scope.outHide = "false";
     $scope.changeHide = function () {
       $scope.outHide = !$scope.outHide;

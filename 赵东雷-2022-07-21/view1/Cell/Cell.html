@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="./view1/Screen/Screen.css">
+<!-- 面包屑导航 -->
+<div class="page-title"><span ng-click="onJumpPage('#!/view1')">系统</span>>电源与电池</div>
+<!-- 页面主要内容 -->
+<div class="page-content">
+    <!-- 电池 -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <div class="item">
+        <div class="stitle">电池</div>
+        <div>
+            <!-- <listitems data="data" ng-repeat="data in colorlist" ></listitems> -->
+            <listitems data="celllist[0]" url="celllist[0].url"></listitems>
+            <listitems data="celllist[1]" url="celllist[1].url"></listitems>
+            
+        </div>
+    </div>
+    <!-- 电池 -->
+    <div class="item">
+        <div class="stitle">电池</div>
+        <div>
+            <!-- <listitems data="data" ng-repeat="data in colorlist" ></listitems> -->
+            <listitems data="celluselist[0]" url="celluse[1].url"><dropdown url='Json/direction.json' select="0"></dropdown></listitems>
+            <listitems data="celluselist[1]" url="celluselist[1].url"></listitems>
+        </div>
+    </div>
+    
+    <!-- 页脚 -->
+    <div class="footer">
+        <div class="ques-tip">
+          <img src="../img/help.png" width="20" height="20" />
+          <span><a href="#" class="link">获取帮助</a></span>
+        </div>
+        <div class="ques-tip">
+          <img src="../img/fankui.png" width="20" height="20" />
+          <span><a href="#" class="link">提供反馈</a></span>
+        </div>
+    </div>
+</div>
