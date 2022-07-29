@@ -1,0 +1,7 @@
+<!--pages/nav/nav.wxml-->
+<text>缓存跳转：{{paramsValue}}</text>
+<view>navigator:{{navigatorVal}}</view>
+<view>api:
+  <view>name:{{apiname}}</view>
+	<view>score:{{apiscore}}</view>
+</view>

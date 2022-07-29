@@ -1,0 +1,10 @@
+<!--pages/home/home.wxml-->
+<view> 
+   <button bindtap="getUserInfo" wx:if="{{display}}">
+	      获取用户信息
+	 </button>
+	 <image src="{{avater}}"></image>
+	 <view>
+		 {{nickname}}
+	 </view>
+</view>

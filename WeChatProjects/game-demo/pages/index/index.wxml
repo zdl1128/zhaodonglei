@@ -1,0 +1,79 @@
+<!-- 导入 -->
+<import src='/templates/listTemp'></import>
+<view class="container">
+  <!-- 滚动菜单 -->
+  <view>
+    <scroll-view class="background-scroll" scroll-x>
+      <view class="nav">
+        <block wx:for="{{navigatorArr}}">
+          <navigator url=''>{{item}}</navigator>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="ads">
+    <swiper class='for-tu' autoplay indicator-dots>
+      <swiper-item>
+        <image src='https://img0.baidu.com/it/u=1869844006,3933292715&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='https://img0.baidu.com/it/u=4014488575,3589850179&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='https://img2.baidu.com/it/u=1890979637,1310771399&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500'></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 导航菜单 -->
+  <view class="outer-view">
+    <view class="inner-view" wx:for="{{nav}}">
+      <navigator url='{{item.url}}'>
+        <image src='/images/{{item.img}}'></image>
+        <view class="inner-fnt">{{item.title}}</view>
+      </navigator>
+    </view>
+
+
+  </view>
+
+  <!-- 动态导航 -->
+  <view>
+    <scroll-view scroll-x>
+      <view class="scroll-view">
+        <view class="inner-view margin" wx:for="{{navArr}}">
+          <navigator url='{{item.url}}'>
+            <image src='/images/{{item.img}}'></image>
+            <view class="inner-fnt">{{item.title}}</view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 搜索栏 -->
+  <view class="search">
+  </view>
+
+  <!-- 游戏列表1 -->
+<view>
+    <view class="list" wx:for="{{gameList}}">
+         <template is="listTemp" data="{{...item}}"></template>
+     </view>
+</view>
+
+<!-- 广告 -->
+<image src="/images/gg.webp" class="ad"></image>
+
+  <!-- 游戏列表2 -->
+  <view>
+    <view class="list" wx:for="{{gameList}}">
+         <template is="listTemp" data="{{...item}}"></template>
+     </view>
+</view>
+
+<!-- 包含底部 -->
+<include src="/templates/footer"/>
+</view>
+

@@ -75,14 +75,6 @@ Page({
     })
     this.save()
   },
-  // sql = [
-  //   {
-  //     openid:"",
-  //     list:[
-  //       {zhuangtai:99,content:"asdads"}
-  //     ]
-  //   }
-  // ]
   // 已完成到未完成
   yeslist: function (e) {
     var data1 = this.data.yesList.splice(e.currentTarget.dataset.index, 1)[0]

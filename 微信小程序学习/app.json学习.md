@@ -4,7 +4,7 @@
 
 - ```
     "window":{
-      "backgroundTextStyle":"dark",      //7行刷新的loading点的变化效果
+      "backgroundTextStyle":"dark",      //刷新的loading点的变化效果
       "navigationBarBackgroundColor": "#fff",  //改变头部背景色
       "navigationBarTitleText": "Weixin",  //改变头部文本
       "navigationBarTextStyle":"black",  //改变文本颜色
